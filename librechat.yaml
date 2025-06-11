@@ -1,0 +1,15 @@
+endpoints:
+  custom:
+    - name: "Reicast"
+      apiKey: "${RAICAST_KEY}"
+      baseURL: "${RAICAST_ENDPOINT}"
+      models:
+        default: 
+          - google-gemini-2.5-pro
+          - openai-gpt-4o
+          - openai_o1-o3
+          - anthropic-claude-sonnet
+          - anthropic-claude-sonnet-4-reasoning
+      titleConvo: true
+      titleModel: "current_model"
+      modelDisplayLabel: "Raycast"
