@@ -1,6 +1,6 @@
 endpoints:
   custom:
-    - name: "Reicast"
+    - name: "RC"
       apiKey: "${RAICAST_KEY}"
       baseURL: "${RAICAST_ENDPOINT}"
       models:
@@ -12,4 +12,4 @@ endpoints:
           - anthropic-claude-sonnet-4-reasoning
       titleConvo: true
       titleModel: "current_model"
-      modelDisplayLabel: "Raycast"
+      modelDisplayLabel: "Rcrouter"
