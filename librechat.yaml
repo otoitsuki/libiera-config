@@ -1,29 +1,17 @@
-version: 1.1.4
+version: 1.2.4
 cache: true
 endpoints:
   custom:
-    - name: "OpenRouter"
-      apiKey: "${OPENROUTER_KEY}"
-      baseURL: "https://openrouter.ai/api/v1"
+    - name: "RC"
+      apiKey: "${RAICAST_KEY}"
+      baseURL: "${RAICAST_ENDPOINT}"
       models:
-        default: ["gpt-3.5-turbo"]
-        fetch: true
+        default: 
+          - google-gemini-2.5-pro
+          - openai-gpt-4o
+          - openai_o1-o3
+          - anthropic-claude-sonnet
+          - anthropic-claude-sonnet-4-reasoning
       titleConvo: true
       titleModel: "current_model"
-      summarize: false
-      summaryModel: "current_model"
-      forcePrompt: false
-      modelDisplayLabel: "OpenRouter"
-    - name: "Ollama"
-      apiKey: "ollama"
-      baseURL: "http://host.docker.internal:11434/v1/"
-      models:
-        default: [
-          "llama3:latest",
-          "command-r",
-          "mixtral",
-          "phi3"
-          ]
-        fetch: true # fetching list of models is not supported
-      titleConvo: true
-      titleModel: "current_model"
+      modelDisplayLabel: "Rcrouter"
